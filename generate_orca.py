@@ -59,6 +59,6 @@ def run_orca_calculations(input_files):
         with open(output_filename, "w") as output_file:
             subprocess.run(command, stdout=output_file, stderr=subprocess.STDOUT)
 
-ef_values = np.array([0.043250,0.043450,0.043550,0.043750])
+ef_values = np.linspace(0.043334, 0.043847, 30)
 input_files = generate_orca_inputs("4nitroaniline", ef_values)
 run_orca_calculations(input_files)
